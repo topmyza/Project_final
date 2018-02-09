@@ -25,4 +25,7 @@ Route::get('/view-transaction-history',['as'=>'frontend.afterlogin.transactionhi
 Route::get('/view-recent-transactions',['as'=>'frontend.afterlogin.recenttransactions','uses'=>'AllPageController@gotoViewRecentTransactions']);
 Route::get('/view-status-washing-machine',['as'=>'frontend.afterlogin.checkstatuswm','uses'=>'AllPageController@gotoViewStatusWM']);
 
+Route::get('/linepay/{orderid}',['as'=>'LinePay','uses'=>'LinePayController@index']);
+
+
 
