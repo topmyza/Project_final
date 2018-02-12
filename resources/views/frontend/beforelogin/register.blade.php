@@ -90,7 +90,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer-bottom" id="ftbHM" style="color: #ffffff;background-color: #222;clear: both;bottom: 0px;width: 101%;">
+	<div class="footer-bottom" id="ftbHM" style="color: #ffffff;background-color: #222;">
 		@include('header.userfooter')
 	</div>
 </body>

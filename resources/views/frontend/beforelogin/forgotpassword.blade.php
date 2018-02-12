@@ -73,7 +73,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer-bottom" id="ftbHM" style="color: #ffffff;background-color: #222;clear: both;position:fixed;bottom: 0px;width: 100%;">
+	<div class="footer-bottom" id="ftbHM" style="color: #ffffff;background-color: #222;">
 		@include('header.userfooter')
 	</div>
 </body>

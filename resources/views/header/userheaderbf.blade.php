@@ -5,8 +5,8 @@
 	});
 </script>
 <nav class="navbar navbar-inverse bg-primary">
-  	<div class="container-fluid">
-	  	<div class="col-md-12 col-sm-24">
+  	<div class="container-fluid" style="top: 0px;width: 100%;">
+	  	<div class="col-md-12 col-sm-24 col-xs-24">
 		    <div class="navbar-header">
 		    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarheaderbf">
 			        <span class="icon-bar"></span>

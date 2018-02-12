@@ -86,7 +86,7 @@
 		<div class="row">
 			<div class="col-md-1 col-sm-2" style="text-align: center;">
 			</div>
-			<div class="col-md-10 col-sm-8" style="text-align: center;margin-top:4%; margin-bottom:15%;">
+			<div class="col-md-10 col-sm-8" style="text-align: center;margin-top:2.5%; margin-bottom:2.5%;">
 				<div class="panel-group" style="box-shadow:0 0 15px #000000;">
 					<div class="panel panel-primary">
 					    <div class="panel-heading text-center">
@@ -254,9 +254,7 @@
 						                <input id="inputShowFreqDialyWM5" class="form-control" type="text" name="inputShowFreqDialyWM5" value="0" maxlength="50" style="font-size: 120%;color:red;">
 						                <script>$("#inputShowFreqDialyWM5").prop('disabled', true);</script>
 							      	</div>
-							      	<br>	
-								</div>	
-								<br> 	 	 	 	    		 
+								</div>		 	 	 	    		 
 							</div>
 						</div>
 					</div>
@@ -266,7 +264,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer-bottom" id="ftbHM" style="color: #ffffff;background-color: #222;clear: both;bottom: 0px;width: 100%;position: fixed;">
+	<div class="footer-bottom" id="ftbHM" style="color: #ffffff;background-color: #222;">
 		@include('header.userfooter')
 	</div>
 </body>

@@ -54,7 +54,7 @@
 		<div class="row">
 			<div class="col-md-4 col-sm-2" style="text-align: center;">
 			</div>
-			<div class="col-md-4 col-sm-8" style="text-align: center;margin-top:10.5%;margin-bottom:10%;">
+			<div class="col-md-4 col-sm-8" style="text-align: center;margin-top:9.6%;margin-bottom:9.6%;">
 				<div class="panel-group" style="box-shadow:0 0 18px #000000;">
 				    <div class="panel panel-primary">
 				      	<div class="panel-heading text-center">
@@ -94,7 +94,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="footer-bottom" id="ftbHM" style="color: #ffffff;background-color: #222;clear: both;position: fixed;bottom: 0px;width: 100%;">
+	<div class="footer-bottom" id="ftbHM" style="color: #ffffff;background-color: #222;">
 		@include('header.userfooter')
 	</div>
 </body>
