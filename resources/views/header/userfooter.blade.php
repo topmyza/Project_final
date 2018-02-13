@@ -1,5 +1,5 @@
-<br>
-<div class="container-fluid" style="bottom: 0px;width: 100%;">
+
+<!-- <div class="container-fluid" style="bottom: 0px;width: 100%;">
 	<div class="row">
         <div class="col-md-1">
         </div>
@@ -13,5 +13,11 @@
 			Contact Us by 096-439-3198 »
         </div>
     </div>
-</div>
-<br>
+</div> -->
+
+
+<footer class="navbar navbar-inverse navbar-fixed-bottom" style="bottom:0px;">
+    <div class="container">
+        <p class="navbar-text" align="center" style="color: white;">&copy; 2017 | Created by IoT and e-Payment system for automatic washing machine administrator / Contact Us by 096-439-3198<p>
+    </div>
+</footer>

@@ -4,9 +4,10 @@
 	  	$('a[href$="' + location.pathname.match(/[^\\/]+$/)[0] + '"]').closest('li').addClass('active'); 
 	});
 </script>
-<nav class="navbar navbar-inverse bg-primary">
-  	<div class="container-fluid" style="top: 0px;width: 100%;">
-	  	<div class="col-md-12 col-sm-24 col-xs-24">
+
+<header class="navbar navbar-inverse navbar-static-top bg-primary">
+  	<div class="container-fluid" style="top: 0px;">
+	  	<div class="col-md-12 col-sm-24">
 		    <div class="navbar-header">
 		    	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarheaderbf">
 			        <span class="icon-bar"></span>
@@ -27,4 +28,4 @@
 			</div>
 		</div>
   	</div>
-</nav>
+</header>

@@ -16,7 +16,7 @@
 			background-repeat: no-repeat;
     		background-attachment: fixed;
     		clear: both;
-    		top: 0px;
+    		padding-bottom: 40px
 		}
 		.panel > .panel-heading {
 		    background-image: none;

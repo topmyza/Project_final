@@ -16,6 +16,7 @@
 			background-repeat: no-repeat;
     		background-attachment: fixed;
     		clear: both;
+    		padding-bottom: 40px;
 		}
 		.panel > .panel-heading {
 		    background-image: none;
@@ -38,56 +39,56 @@
 	</script>
 	</head>
 <body class="body">
-	<div class="row">
+	<div class="header-bf" id="HDBF" style="color: #ffffff;background-color: #222;">
 		@include('header.userheaderbf')
-		<div class="row">
-			<div class="col-md-4 col-sm-2" style="text-align: center;">
-			</div>
-			<div class="col-md-4 col-sm-8" style="text-align: center;margin-top:2%;margin-bottom:2%;">
-				<div class="panel-group" style="box-shadow:0 0 18px #000000;" style="height:1000px">
-				    <div class="panel panel-primary">
-				      	<div class="panel-heading text-center">
-				      		<b class="panel-title" id="strInfoRES" style="font-size:150%;">ลงทะเบียนผู้ใช้งาน</b>
-				      	</div>
-				      	<div class="panel-body">
-				      		<div class="text-left">	
-				      			<div class="col-md-12 col-sm-14">
-							      	<div class="form-group">
-									    <label for="inputEmailSI">อีเมลล์</label>
-									    <input type="text" class="form-control" required="required" name="emailSI" id="inputEmailSI" placeholder="example@mail.com">
-									</div>
-									<div class="form-group">
-									    <label for="inputServicePointNameSI">ชื่อจุดให้บริการ</label>
-									    <input type="text" class="form-control" required="required" name="servicepointnameSI" id="inputServicePointName" placeholder="กรุณาใส่ชื่อจุดให้บริการของคุณ">
-									</div>
-									<div class="form-group">
-									    <label for="inputServicePointAddressSI">ที่อยู่จุดให้บริการ</label>
-									    <textarea type="text" class="form-control" required="required" name="servicepointaddressSI" id="inputServicePointAddressSI" rows="2" placeholder="กรุณาใส่ที่อยู่จุดให้บริการของคุณ"></textarea>
-									</div>
-									<div class="form-group">
-									    <label for="inputPasswordSI">รหัสผ่าน</label>
-									    <input class="form-control" required="required" name="passwordSI" id="inputPasswordSI" placeholder="ตั้งรหัสผ่านของคุณ">
-									</div>
-									<div class="form-group">
-									    <label for="inputRePasswordSI">ยืนยันรหัสผ่าน</label>
-									    <input type="password" class="form-control" required="required" name="repasswordSI" id="inputRePasswordSI" placeholder="ยืนยันรหัสผ่านของคุณอีกครั้ง">
-									</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4 col-sm-2" style="text-align: center;">
+		</div>
+		<div class="col-md-4 col-sm-8" style="text-align: center;margin-top:2%;margin-bottom:2%;">
+			<div class="panel-group" style="box-shadow:0 0 18px #000000;" style="height:1000px">
+			    <div class="panel panel-primary">
+			      	<div class="panel-heading text-center">
+			      		<b class="panel-title" id="strInfoRES" style="font-size:150%;">ลงทะเบียนผู้ใช้งาน</b>
+			      	</div>
+			      	<div class="panel-body">
+			      		<div class="text-left">	
+			      			<div class="col-md-12 col-sm-14">
+						      	<div class="form-group">
+								    <label for="inputEmailSI">อีเมลล์</label>
+								    <input type="text" class="form-control" required="required" name="emailSI" id="inputEmailSI" placeholder="example@mail.com">
 								</div>
-								<div class="col-md-12 col-sm-16">
-									
-										<div class="form-group" align="center">
-										  	<button type="submit" id="btnCreateAccountSI" class="btn bg-black btn-md form-control" data-toggle="modal" data-target="#resModal"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp; สร้างบัญชีผู้ใช้งาน</button>
-										  	@include('frontend.modal.confirmresgister')
-										</div>
-									<!-- </form> -->
+								<div class="form-group">
+								    <label for="inputServicePointNameSI">ชื่อจุดให้บริการ</label>
+								    <input type="text" class="form-control" required="required" name="servicepointnameSI" id="inputServicePointName" placeholder="กรุณาใส่ชื่อจุดให้บริการของคุณ">
+								</div>
+								<div class="form-group">
+								    <label for="inputServicePointAddressSI">ที่อยู่จุดให้บริการ</label>
+								    <textarea type="text" class="form-control" required="required" name="servicepointaddressSI" id="inputServicePointAddressSI" rows="2" placeholder="กรุณาใส่ที่อยู่จุดให้บริการของคุณ"></textarea>
+								</div>
+								<div class="form-group">
+								    <label for="inputPasswordSI">รหัสผ่าน</label>
+								    <input class="form-control" required="required" name="passwordSI" id="inputPasswordSI" placeholder="ตั้งรหัสผ่านของคุณ">
+								</div>
+								<div class="form-group">
+								    <label for="inputRePasswordSI">ยืนยันรหัสผ่าน</label>
+								    <input type="password" class="form-control" required="required" name="repasswordSI" id="inputRePasswordSI" placeholder="ยืนยันรหัสผ่านของคุณอีกครั้ง">
 								</div>
 							</div>
-				      	</div>
-				    </div>
-				</div>
+							<div class="col-md-12 col-sm-16">
+								
+									<div class="form-group" align="center">
+									  	<button type="submit" id="btnCreateAccountSI" class="btn bg-black btn-md form-control" data-toggle="modal" data-target="#resModal"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp; สร้างบัญชีผู้ใช้งาน</button>
+									  	@include('frontend.modal.confirmresgister')
+									</div>
+								<!-- </form> -->
+							</div>
+						</div>
+			      	</div>
+			    </div>
 			</div>
-			<div class="col-md-4 col-sm-2" style="text-align: center;">
-			</div>
+		</div>
+		<div class="col-md-4 col-sm-2" style="text-align: center;">
 		</div>
 	</div>
 	<div class="footer-bottom" id="ftbHM" style="color: #ffffff;background-color: #222;">
