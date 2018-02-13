@@ -52,15 +52,37 @@
 	         "bDestroy": true,
 	         "responsive": true
 	         });
-			$('#datepicker1').datepicker({
+			$('#datepickerStartDate').datepicker({
 				format : "dd/mm/yyyy",
 				autoclose : true,
+				endDate: "0d",
 				todayHighlight : true
 			});
-			$('#datepicker2').datepicker({
+			$('#datepickerEndDate').datepicker({
 				format : "dd/mm/yyyy",
 				autoclose : true,
+				endDate: "0d",
 				todayHighlight : true
+			});
+			$('#datepickerViewDay').datepicker({
+				format : "dd/mm/yyyy",
+				autoclose : true,
+				endDate: "0d",
+				todayHighlight : true
+			});
+			$('#datepickerViewMonth').datepicker({
+				format : "mm/yyyy",
+				autoclose : true,
+				startView: "months",
+			    minViewMode: "months",
+			    endDate: "0m"
+			});
+			$('#datepickerViewYear').datepicker({
+				format : "yyyy",
+				autoclose : true,
+				viewMode: "years", 
+    			minViewMode: "years",
+    			endDate: "endYear"
 			});
 			$('#inputChooseRangeTH').on('change', function() {
 			    if ( this.value == 'choosely'){
@@ -70,6 +92,23 @@
 			    else{
 			        $("#searchly").hide();
 			        $("#searchrange").show();
+			    }
+		    });
+		    $('#inputChooseSearchlyTH').on('change', function() {
+			    if ( this.value == 'day'){
+			        $("#calendarViewMonth").hide();
+			        $("#calendarViewYear").hide();
+			        $("#calendarViewDay").show();
+			    }
+			    else if ( this.value == 'month'){
+			        $("#calendarViewYear").hide();
+			        $("#calendarViewDay").hide();
+			        $("#calendarViewMonth").show();
+			    }
+			    else{
+			        $("#calendarViewDay").hide();
+			        $("#calendarViewMonth").hide();
+			        $("#calendarViewYear").show();
 			    }
 		    });
 		});
@@ -138,37 +177,49 @@
 							</div>
 							<br> -->
 							<div class="container-fluid" id="searchly">
-						     	<div class="col-md-3 col-sm-6">
-					                <div class='input-group date' id='datepicker3'>
-					                    <input id="inputAutoStartDateTH" class="form-control date-range-filter" placeholder="วัน/เดือน/ปี ค.ศ." type="text" name="inputSetStartDateTH" maxlength="50">
+						      	<div class="col-md-3 col-sm-6 control-label">
+						      	     <p class="text-left">
+					   		 	 	 	 <b for="inputChooseSearchlyTH" style="font-size: 120%">ประเภทรอบที่ต้องการทราบ:</b>
+					   		 	 	 </p>
+						      	</div>
+							    <div class="col-md-3 col-sm-6">
+									<select id="inputChooseSearchlyTH" name="inputChooseSearchlyTH" class="form-control">
+						      	 	    <option value="day">รายวัน</option>
+										<option value="month">รายเดือน</option>
+										<option value="year">รายปี</option>
+									</select>
+						      	</div>
+						      	<div class="col-md-1 col-sm-12 control-label">								      		
+								</div>
+								<div class="visible-sm visible-xs">
+					      			<br>
+					      		</div>						      	
+						     	<div class="col-md-5 col-sm-10" id="calendarViewDay">
+					                <div class='input-group date' id='datepickerViewDay'>
+					                    <input id="inputSetViewDayTH" class="form-control date-range-filter" placeholder="วัน/เดือน/ปี ค.ศ." type="text" name="inputSetViewDayTH" maxlength="50">
 					                    <span class="input-group-addon" id="iconDate1">
 					                        <span class="glyphicon glyphicon-calendar"></span>
 					                    </span>
-					                    <script>$("#inputAutoStartDateTH").prop('disabled', true);</script>
 					                </div>
 						      	</div>
-						      	<div class="col-md-1 col-sm-1">
-						      		<b for="inputTransactionIDTH" style="font-size: 120%">ถึง</b>
-						      	</div>			      	
-						     	<div class="col-md-3 col-sm-6">
-					                <div class='input-group date' id='datepicker4'>
-					                    <input id="inputAutoEndDateTH" class="form-control date-range-filter" placeholder="วัน/เดือน/ปี ค.ศ." type="text" name="inputSetEndDateTH" maxlength="50">
-					                    <span class="input-group-addon" id="iconDate2">
+						      	<div class="col-md-5 col-sm-10" id="calendarViewMonth">
+					                <div class='input-group date' id='datepickerViewMonth'>
+					                    <input id="inputSetViewMonthTH" class="form-control date-range-filter" placeholder="เดือน/ปี ค.ศ." type="text" name="inputSetViewMonthTH" maxlength="50">
+					                    <span class="input-group-addon" id="iconDate1">
 					                        <span class="glyphicon glyphicon-calendar"></span>
 					                    </span>
-					                    <script>$("#inputAutoEndDateTH").prop('disabled', true);</script>
-					                </div>						               
+					                </div>
 						      	</div>
-						      	<div class="col-md-5 col-sm-10">
-						      		<div class="visible-sm visible-xs">
-						      			<br>
-						      		</div>
-						      	    <button type="button" class="btn bg-black" id="btnSearchDaily" name="btnSearchTransactions" onclick=""><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp; รายวัน</button>&nbsp;
-						      	    <button type="button" class="btn bg-black" id="btnSearchWeekly" name="btnSearchTransactions" onclick=""><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp; รายสัปดาห์</button>&nbsp;
-						      	    <button type="button" class="btn bg-black" id="btnSearchMonthly" name="btnSearchTransactions" onclick=""><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp; รายเดือน</button>&nbsp;
-						      	    <button type="button" class="btn bg-black" id="btnSearchYearly" name="btnSearchTransactions" onclick=""><span class="glyphicon glyphicon-search"></span>&nbsp;&nbsp; รายปี</button>&nbsp;
-
+						      	<div class="col-md-5 col-sm-10" id="calendarViewYear">
+					                <div class='input-group date' id='datepickerViewYear'>
+					                    <input id="inputSetViewYearTH" class="form-control date-range-filter" placeholder="ปี ค.ศ." type="text" name="inputSetViewYearTH" maxlength="50">
+					                    <span class="input-group-addon" id="iconDate1">
+					                        <span class="glyphicon glyphicon-calendar"></span>
+					                    </span>
+					                </div>
 						      	</div>
+						      	<script>$("#calendarViewMonth").hide();</script>
+						      	<script>$("#calendarViewYear").hide();</script>
 							</div>
 							<div class="container-fluid" id="searchrange">
 								<div class="col-md-3 col-sm-6 control-label">
@@ -177,7 +228,7 @@
 					   		 	 	 </p>
 						      	</div>
 						     	<div class="col-md-3 col-sm-6">
-					                <div class='input-group date' id='datepicker1'>
+					                <div class='input-group date' id='datepickerStartDate'>
 					                    <input id="inputSetStartDateTH" class="form-control date-range-filter" placeholder="วัน/เดือน/ปี ค.ศ." type="text" name="inputSetStartDateTH" maxlength="50">
 					                    <span class="input-group-addon" id="iconDate1">
 					                        <span class="glyphicon glyphicon-calendar"></span>
@@ -192,7 +243,7 @@
 					   		 	 	 </p>
 						      	</div>
 						     	<div class="col-md-3 col-sm-6">
-					                <div class='input-group date' id='datepicker2'>
+					                <div class='input-group date' id='datepickerEndDate'>
 					                    <input id="inputSetEndDateTH" class="form-control date-range-filter" placeholder="วัน/เดือน/ปี ค.ศ." type="text" name="inputSetEndDateTH" maxlength="50">
 					                    <span class="input-group-addon" id="iconDate2">
 					                        <span class="glyphicon glyphicon-calendar"></span>
