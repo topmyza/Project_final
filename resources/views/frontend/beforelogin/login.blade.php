@@ -36,9 +36,33 @@
 	<script>
 		$(document).ready(function() {
 	  		$('.navbar-brand').text("ยินดีต้อนรับสู่ระบบลงชื่อเข้าใช้งาน");
+	  		// $('#btnLoginLI').on('click', function() {
+		   //  	if ($("#inputEmailLI").val()=="" and $("#inputPasswordLI").val()==""){
+		   //  		alert("กรุณาใส่อีเมลและรหัสผ่าน");
+		   //  	}
+		   //  	else if ($("#inputEmailLI").val()=="" and $("#inputPasswordLI").val()!=""){
+		   //  		alert("กรุณาใส่รหัสผ่าน");
+		   //  	}
+		   //  	else if ($("#inputEmailLI").val()!="" and $("#inputPasswordLI").val()==""){
+		   //  		alert("กรุณาใส่อีเมล");
+		   //  	}
+		   //  	else{
+		   //  		if ($("#inputEmailLI").val()!="topmyza"){
+		   //  			alert("ไม่มีอีเมลนี้อยู่ในระบบ");
+		   //  		}
+		   //  		else {
+		   //  			if ($("#inputEmailLI").val()=="topmyza" and $("#inputPasswordLI").val()=="12345"){
+		   //  				alert("สำเร็จ");
+		   //  			}
+		   //  			else {
+		   //  				alert("อีเมลหรือรหัสผ่านไม่ถูกต้อง");
+		   //  			}
+		   //  		}
+		   //  	}
+		   //  });	
 		});
         function btnSHPassword() {
-            if ($("#inputPasswordLI").attr("type") === "password") {
+            if ($("#inputPasswordLI").attr("type") == "password") {
                 $("#inputPasswordLI").attr("type", "text");
                 $("#btnpasswordLIHS").html("ซ่อน");
             } else {
