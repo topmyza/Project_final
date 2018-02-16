@@ -56,12 +56,26 @@
 				format : "dd/mm/yyyy",
 				autoclose : true,
 				endDate: "0d",
-			});
+			 }).on('changeDate', function (selected) {
+			    var startDate = new Date(selected.date.valueOf());
+			    $('#datepickerEndDate').datepicker('setStartDate', startDate);
+			 }).on('clearDate', function (selected) {
+			    $('#datepickerEndDate').datepicker('setStartDate', null);
+			 }
+			);
+
 			$('#datepickerEndDate').datepicker({
 				format : "dd/mm/yyyy",
 				autoclose : true,
 				endDate: "0d",
-			});
+			 }).on('changeDate', function (selected) {
+			    var endDate = new Date(selected.date.valueOf());
+			    $('#datepickerStartDate').datepicker('setEndDate', endDate);
+			 }).on('clearDate', function (selected) {
+			    $('#datepickerStartDate').datepicker('setEndDate', null);
+			 }
+			);
+
 			$('#datepickerViewDay').datepicker({
 				format : "dd/mm/yyyy",
 				autoclose : true,
@@ -115,22 +129,30 @@
 			    }
 		    });
 		    $('#btnSearchTransactions').on('click', function() {
-		    	if ($("#inputChooseRangeTH").val()==""){
-		    		alert("หมายเลขเครื่อง="+$("#inputChooseWashingMachineTH").val()+"/"+"ประเภทเวลา="+$("#inputChooseRangeTH").val());
+		    	var selectwm = $("#inputChooseWashingMachineTH").val();
+		    	var selectrange = $("#inputChooseRangeTH").val();
+		    	var selectly = $("#inputChooseSearchlyTH").val();
+		    	var viewday = $("#inputSetViewDayTH").val();
+		    	var viewmonth = $("#inputSetViewMonthTH").val();
+		    	var viewyear = $("#inputSetViewYearTH").val();
+		    	var startdate = $("#inputSetStartDateTH").val();
+		    	var enddate = $("#inputSetEndDateTH").val();
+		    	if ( selectrange == ""){
+		    		alert("หมายเลขเครื่อง="+selectwm+"/"+"ประเภทเวลา="+selectrange);
 		    	}
-		    	else if ($("#inputChooseRangeTH").val()=="choosely"){
-		    		if ($("#inputChooseSearchlyTH").val()=="day"){
-		    			alert("หมายเลขเครื่อง="+$("#inputChooseWashingMachineTH").val()+"/"+"ประเภทเวลา="+$("#inputChooseRangeTH").val()+"/"+"ประเภทช่วง="+$("#inputChooseSearchlyTH").val()+"/"+"วันเดือนปี="+$("#inputSetViewDayTH").val());
+		    	else if ( selectrange == "choosely"){
+		    		if ( selectly == "day"){
+		    			alert("หมายเลขเครื่อง="+selectwm+"/"+"ประเภทเวลา="+selectrange+"/"+"ประเภทช่วง="+selectly+"/"+"วันเดือนปี="+viewday);
 		    		}
-		    		else if ($("#inputChooseSearchlyTH").val()=="month"){
-		    			alert("หมายเลขเครื่อง="+$("#inputChooseWashingMachineTH").val()+"/"+"ประเภทเวลา="+$("#inputChooseRangeTH").val()+"/"+"ประเภทช่วง="+$("#inputChooseSearchlyTH").val()+"/"+"เดือนปี="+$("#inputSetViewMonthTH").val());
+		    		else if ( selectly == "month"){
+		    			alert("หมายเลขเครื่อง="+selectwm+"/"+"ประเภทเวลา="+selectrange+"/"+"ประเภทช่วง="+selectly+"/"+"เดือนปี="+viewmonth);
 		    		}
-		    		else if($("#inputChooseSearchlyTH").val()=="year"){
-		    			alert("หมายเลขเครื่อง="+$("#inputChooseWashingMachineTH").val()+"/"+"ประเภทเวลา="+$("#inputChooseRangeTH").val()+"/"+"ประเภทช่วง="+$("#inputChooseSearchlyTH").val()+"/"+"ปี="+$("#inputSetViewYearTH").val());
+		    		else if( selectly == "year"){
+		    			alert("หมายเลขเครื่อง="+selectwm+"/"+"ประเภทเวลา="+selectrange+"/"+"ประเภทช่วง="+selectly+"/"+"ปี="+viewyear);
 		    		}
 		    	}
-		    	else if ($("#inputChooseRangeTH").val()=="chooserange"){
-		    		alert("หมายเลขเครื่อง="+$("#inputChooseWashingMachineTH").val()+"/"+"ประเภทเวลา="+$("#inputChooseRangeTH").val()+"/"+"วันเริ่ม="+$("#inputSetStartDateTH").val()+"วันสิ้นสุด="+$("#inputSetEndDateTH").val());
+		    	else if ( selectrange == "chooserange"){
+		    		alert("หมายเลขเครื่อง="+selectwm+"/"+"ประเภทเวลา="+selectrange+"/"+"วันเริ่ม="+startdate+"/"+"วันสิ้นสุด="+enddate);
 		    	}
 		    });	
 		});
